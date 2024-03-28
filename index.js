@@ -11,7 +11,9 @@ var app = express(); // Create an instance of Express application
 app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.urlencoded({ extended: false })); // Parse URL-encoded request bodies
 app.use(bodyParser.json()); // Parse JSON request bodies
-
+app.get('/api/demo',()=>{
+    res.send("OK")
+})
 // Define routes
 app.use('/api/v1', route); // Mount the custom router at /api/v1
 
