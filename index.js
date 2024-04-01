@@ -18,7 +18,9 @@ app.get('/api/demo',()=>{
 app.use('/api/v1', route); // Mount the custom router at /api/v1
 
 // Start the server
+console.log(process.env.PORT,"rrr")
 let port = process.env.PORT; // Get port number from environment variables
+console.log(port,"port")
 app.listen(port, () => {
     console.log(`Server started at http://localhost:${port}`); // Log server start message with port number
 });
